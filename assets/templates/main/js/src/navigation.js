@@ -39,7 +39,6 @@ export default class Navigation {
   bindEvents = () => {
     const {
       expanded,
-      screen,
     } = this.state;
 
     window.addEventListener('resize', () => {
@@ -89,7 +88,6 @@ export default class Navigation {
   render() {
     const {
       expanded,
-      screen,
     } = this.state;
 
     if (expanded) {
