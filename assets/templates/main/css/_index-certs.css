@@ -1,0 +1,25 @@
+.index-certs {
+  &__container {
+    padding: 10px 20px;
+  }
+
+  &__header {
+    font-family: var(--font-main);
+    font-size: 2rem;
+    margin: 0;
+    padding: 20px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &-item {
+    display: block;
+
+    &__image {
+      display: block;
+      height: auto;
+      margin: 0 auto;
+      width: 80%;
+    }
+  }
+}

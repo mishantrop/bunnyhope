@@ -1,0 +1,84 @@
+@import '_header-navigation';
+
+.header {
+  background-color: #fff;
+  font-family: var(--font-main);
+  padding: 0;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &-logo {
+    display: block;
+    height: 76px;
+    width: 120px;
+    
+    @media (--mobile) {
+      display: none;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: var(--color-main);
+        }
+      }
+    }
+
+    svg {
+      display: block;
+      height: 76px;
+      width: 120px;
+
+      path {
+        fill: var(--color-main);
+        transition: fill var(--transition-length) linear;
+      }
+    }
+  }
+
+  &-contacts {
+    font-family: var(--font-second);
+    min-width: 140px;
+
+    &__phone {
+      color: #000;
+      display: block;
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0 auto 5px;
+      text-align: center;
+      text-decoration: none;
+      transition: color var(--transition-length) linear;
+      
+      @mixin selection;
+
+      &:hover {
+        color: var(--color-main);
+      }
+    }
+    &__callback {
+      appearance: none;
+      background-color: transparent;
+      border: 0;
+      border-bottom: 1px dashed var(--color-main);
+      color: var(--color-main);
+      cursor: pointer;
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin: 0 auto;
+      padding: 0;
+      text-align: center;
+      text-transform: uppercase;
+      
+      @mixin selection;
+    }
+  }
+}

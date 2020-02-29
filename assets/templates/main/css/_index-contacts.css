@@ -1,0 +1,146 @@
+.index-contacts {
+  font-family: var(--font-main);
+  padding: 50px 0 140px;
+  
+  @media (--tablet) {
+    padding: 40px var(--padding-side);
+  }
+  
+  @media (--mobile) {
+    padding: 40px 0;
+  }
+
+  &__header {
+    font-size: 2rem;
+    margin: 0;
+    padding: 0 0 2rem 0;
+    text-align: center;
+    text-transform: uppercase;
+    
+    @media (--mobile) {
+      font-size: 30px;
+      margin: 0 0 10px;
+      text-align: center;
+    }
+  }
+
+  &__header2 {
+    @mixin header1 center;
+    padding: 0 0 1rem 0;
+  }
+
+  &__right {
+    font-family: var(--font-second);
+    padding: 0 0 0 40px;
+    
+    @media (--tablet) {
+      padding: 20px 0 0;
+    }
+
+    @media (--mobile) {
+      padding: 40px var(--padding-side) 0;
+    }
+  }
+
+  &__contacts {
+    margin: 0 0 2rem;
+    
+    @media (--tablet) {
+      display: flex;
+    }
+
+    @media (--mobile) {
+      display: block;
+    }
+
+    a {
+      color: #000;
+      display: block;
+      margin: 0 0 10px;
+      text-decoration: none;
+
+      &:hover {
+        color: #881a3c;
+      }
+    }
+  }
+  
+  &__email {
+    padding: 0;
+
+    @media (--tablet) {
+      padding: 0 2rem 0 0;
+    }
+
+    @media (--mobile) {
+      padding: 0
+      ;
+    }
+  }
+
+  &__worktime {
+    margin: 0 0 2rem;
+  }
+
+  &__address {
+    font-style: normal;
+    margin: 0 0 2rem;
+  }
+
+  &-errors ul {
+    background-color: #de3c3c;
+    display: block;
+    list-style: none;
+    padding: 1rem;
+  }
+
+  &__social-icons {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    text-align: center;
+    user-select: none;
+
+    @media (--mobile) {
+      justify-content: space-around;
+    }
+  }
+
+  &__social-icon {
+    align-items: center;
+    background-color: var(--color-main);
+    border-radius: 50%;
+    color: #e5b630;
+    display: inline-flex;
+    height: 55px;
+    justify-content: center;
+    margin: 0 1rem;
+    outline: none;
+    text-decoration: none;
+    transition: var(--transition-length) background-color linear;
+    user-select: none;
+    width: 55px;
+    
+    @media (--mobile) {
+      margin: 0;
+    }
+
+    svg {
+      display: block;
+      height: 24px;
+      width: 24px;
+      path {
+        fill: #fff;
+        transition: var(--transition-length) fill ease;
+      }
+    }
+    &:hover {
+      background-color: #c53959;
+      svg {
+        path {
+          fill: #fff;
+        }
+      }
+    }
+  }
+}

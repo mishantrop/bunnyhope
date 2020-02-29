@@ -1,0 +1,119 @@
+@import '_header-navigation-toggler';
+
+.header-navigation {
+  display: flex;
+  justify-content: space-between;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (--tablet) {
+
+  }
+
+  @media (--tablet-landscape) {
+    background-color: #fff;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    opacity: 0.9;
+    overflow: auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+
+    &--expanded {
+      display: flex;
+      overflow-y: auto;
+      padding: 20px 0;
+    }
+  }
+
+  &-close {
+    background-color: #fff;
+    border: 0;
+    color: var(--color-second);
+    cursor: pointer;
+    display: none;
+    height: 40px;
+    padding: 0;
+    position: fixed;
+    right: 15px;
+    top: 20px;
+    transition: background-color var(--transition-length) linear;
+    width: 40px;
+    z-index: 2;
+
+    svg {
+      display: block;
+      height: 40px;
+      width: 40px;
+
+      path {
+        fill: var(--color-second);
+      }
+    }
+
+    @media (--tablet-landscape) {
+      display: block;
+    }
+
+    @media (--mobile) {
+      top: 10px;
+    }
+  }
+
+  &__link {
+    color: #000;
+    font-family: var(--font-second);
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    padding: 0 10px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color var(--transition-length) linear;
+    z-index: 1;
+    
+    @mixin selection;
+
+    &--active {
+      color: var(--color-main);
+    }
+    
+    @media (--notebook) {
+      font-size: 14px;
+      padding: 0 8px;
+    }
+
+    @media (--desktop) {
+      font-size: 13px;
+      padding: 0 5px;
+    }
+
+    @media (--tablet-landscape) {
+      display: block;
+      font-size: 1.5rem;
+      padding: 1rem 0.5rem;
+      text-align: center;
+    }
+    
+    @media (--mobile) {
+      font-size: 1rem;
+      padding: 0.5rem 0.5rem;
+    }
+
+    &:hover {
+      color: var(--color-main);
+
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+}

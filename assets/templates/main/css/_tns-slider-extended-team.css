@@ -1,0 +1,30 @@
+#block-index-team {
+  .tns-slider {
+    background-color: transparent;
+
+    & .index-team-item {
+      background-position: center;
+      background-size: cover;
+      border: 20px solid transparent;
+      display: inline-flex;
+      height: 300px;
+      justify-content: center;
+
+      @media (--desktop) {
+        height: 240px;
+      }
+
+      @media (--tablet) {
+        height: 300px;
+      }
+
+      @media (--mobile) {
+        height: 200px;
+      }
+    }
+  }
+
+  .tns-outer {
+    @mixin tns-outer;
+  }
+}

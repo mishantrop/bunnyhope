@@ -1,0 +1,20 @@
+@import '_tns-slider';
+@import '_tns-slider-extended';
+
+.index-gallery {
+  padding: 60px 0;
+
+  &--desktop {
+    @media (--mobile) {
+      display: none;
+    }
+  }
+
+  &--mobile {
+    display: none;
+
+    @media (--mobile) {
+      display: block;
+    }
+  }
+}

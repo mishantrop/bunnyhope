@@ -1,0 +1,187 @@
+.index-masthead {
+  background-color: var(--color-main);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-display: swap;
+  font-family: var(--font-main);
+  height: 880px;
+  position: relative;
+  text-align: left;
+  user-select: none;
+  z-index: 1;
+
+  @media (--notebook) {
+    height: 750px;
+  }
+
+  @media (--desktop) {
+    height: 700px;
+  }
+
+  @media (--tablet-landscape) {
+    height: 600px;
+  }
+
+  @media (--tablet) {
+    height: 500px;
+  }
+
+  @media (--mobile) {
+    height: 370px;
+  }
+
+  &::before {
+    @mixin gradient-background;
+  }
+
+  &__logo {
+    display: block;
+    margin: 0 auto 30px;
+    text-decoration: none;
+
+    @media (--desktop) {
+      margin: 0 0 20px;
+    }
+
+    @media (--tablet) {
+      margin: 0 0 20px;
+    }
+
+    @media (--mobile) {
+      margin: 0;
+    }
+
+    svg {
+      display: block;
+      margin: 0 auto;
+      height: 300px;
+      width: 300px;
+
+      @media (--tablet) {
+        height: 200px;
+        width: 200px;
+      }
+
+      @media (--mobile) {
+        height: 100px;
+        width: 100px;
+        max-width: 60%;
+      }
+
+      path,
+      circle {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding: 40px var(--padding-side) 20px;
+    position: relative;
+    z-index: 2;
+    
+    @media (--tablet-landscape) {
+      padding: 20 var(--padding-side);
+    }
+    
+    @media (--tablet) {
+      padding: 40px var(--padding-side);
+    }
+    
+    @media (--mobile) {
+      padding: 20px var(--padding-side);
+    }
+  }
+
+  &__description {
+    color: #fff;
+    display: flex;
+
+    @media (--mobile) {
+      display: block;
+    }
+
+    &-left {
+      color: #fff;
+      font-size: 60px;
+      line-height: 1.5;
+      font-weight: 700;
+      margin: 0;
+      text-transform: uppercase;
+      width: 50%;
+      
+      @mixin selection;
+      
+      @media (--tablet-landscape) {
+        font-size: 38px;
+      }
+      
+      @media (--tablet) {
+        font-size: 32px;
+        margin: 0 0 50px;
+      }
+      
+      @media (--mobile) {
+        font-size: 22px;
+        margin: 0 0 20px;
+        width: 100%;
+      }
+
+      @media (--extra-mobile) {
+        font-size: 16px;
+      }
+    }
+    &-right {
+      color: #fff;
+      font-family: var(--font-second);
+      font-size: 22px;
+      font-weight: 400;
+      padding: 0 0 0 2rem;
+      width: 50%;
+      
+      @media (--tablet-landscape) {
+        font-size: 18px;
+      }
+      
+      @media (--tablet) {
+        font-size: 18px;
+      }
+      
+      @media (--mobile) {
+        display: block;
+        padding: 0;
+        font-size: 16px;
+        width: 100%;
+      }
+      
+      @media (--extra-mobile) {
+        font-size: 14px;
+      }
+      
+      p {
+        @mixin selection;
+        &:first-child {
+          margin-top: 1rem;
+
+          @media (--tablet-landscape) {
+            margin-top: 0.5rem;
+          }
+
+          @media (--tablet) {
+            margin-top: 0.5rem;
+          }
+
+          @media (--mobile) {
+            margin-top: 0;
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

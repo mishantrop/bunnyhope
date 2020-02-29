@@ -1,0 +1,78 @@
+.index-infrastructure-item {
+  display: flex;
+  padding: 20px 20px 20px 0;
+
+  @media (--notebook) {
+    padding: 20px 10px 20px 0;
+  }
+
+  @media (--desktop) {
+    padding: 20px 10px 20px 0;
+  }
+  
+  @media (--mobile) {
+    padding: 20px 0;
+  }
+
+  &__value {
+    color: var(--color-main);
+    font-size: 72px;
+    font-weight: 700;
+
+    @media (--notebook) {
+      font-size: 60px;
+    }
+
+    @media (--desktop) {
+      font-size: 42px;
+    }
+
+    @media (--tablet-landscape) {
+      font-size: 42px;
+    }
+    
+    @media (--mobile) {
+      font-size: 56px;
+    }
+    
+    sup {
+      font-size: 36px;
+    }
+  }
+  
+  &__units {
+    color: #000;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    max-width: 120px;
+    padding: 0 0 0 10px;
+    text-transform: uppercase;
+
+    @media (--notebook) {
+      font-size: 20px;
+    }
+
+    @media (--desktop) {
+      font-size: 16px;
+    }
+    
+    @media (--tablet-landscape) {
+      font-size: 17px;
+    }
+    
+    @media (--mobile) {
+      font-size: 17px;
+    }
+    
+    &::before {
+      @mixin line #000;
+      margin: 0 0 20px;
+
+      @media (--desktop) {
+        margin: 0 0 10px;
+      }
+    }
+  }
+}

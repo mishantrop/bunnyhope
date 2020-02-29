@@ -1,0 +1,48 @@
+.index-feedback {
+  background-color: var(--color-main);
+  padding: 60px var(--padding-side) 20px;
+  
+  @media (--mobile) {
+    padding: 40px var(--padding-side);
+  }
+
+  &__container {
+    margin: 0 auto;
+    max-width: 860px;
+  }
+
+  &__header {
+    color: #fff;
+    font-family: var(--font-second);
+    font-size: 2rem;
+    font-weight: 400;
+    letter-spacing: 2px;
+    margin: 0 0 2rem;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  & .form-group {
+    @mixin form-group;
+  }
+  
+  &-messages,
+  &-loader,
+  &-errors {
+    @mixin form-messages;
+  }
+
+  &__input {
+    @mixin form-input;
+  }
+
+  &__submit {
+    @mixin form-button;
+
+    &-wrapper {
+      margin: 0 !important;
+      padding: 0;
+      text-align: center;
+    }
+  }
+}

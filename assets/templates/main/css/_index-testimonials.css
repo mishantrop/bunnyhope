@@ -1,0 +1,32 @@
+@import '_tns-slider-extended-testimonials';
+
+.index-testimonials {
+  font-family: var(--font-main);
+  padding: 50px 0 140px 0;
+
+  &__header {
+    @mixin header3 center;
+    padding: 0 0 2rem 0;
+    
+    @media (--mobile) {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__header2 {
+    @mixin header1 center;
+    padding: 0 0 1rem 0;
+  }
+
+  &-item {
+    font-family: var(--font-second);
+
+    &__text {
+      text-align: center;
+    }
+
+    &__name {
+      text-align: center;
+    }
+  }
+}

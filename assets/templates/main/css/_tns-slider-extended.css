@@ -1,0 +1,43 @@
+#block-index-gallery, #block-index-gallery--mobile {
+  .tns-slider {
+    background-color: #fff;
+
+    & .index-slider-item {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 24px solid #fff;
+      display: inline-block;
+      height: 300px;
+      transition: opacity var(--transition-length) linear;
+
+      &--link {
+        cursor: pointer;
+      
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+
+      @media (--desktop) {
+        height: 240px;
+      }
+
+      @media (--tablet) {
+        height: 300px;
+      }
+
+      @media (--mobile) {
+        height: 400px;
+      }
+    }
+  }
+
+  .tns-outer {
+    position: relative;
+
+    & .tns-controls {
+      @mixin tns-controls-light;
+    }
+  }
+}

@@ -1,0 +1,63 @@
+@import '_index-advantages-item';
+
+.index-advantages {
+  &__container {
+    padding: 120px var(--padding-side);
+    
+    @media (--tablet) {
+      padding: 50px var(--padding-side);
+    }
+    
+    @media (--mobile) {
+      padding: 40px var(--padding-side);
+    }
+  }
+
+  &__content {
+    @mixin tiny-container;
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    
+    @media (--tablet-landscape) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (--tablet) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    @media (--mobile) {
+      display: block;
+    }
+  }
+
+  &__header {
+    font-family: var(--font-main);
+    font-size: 36px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 0 0 2rem;
+    margin: 0;
+    text-transform: uppercase;
+    
+    @media (--mobile) {
+      font-size: 30px;
+      font-weight: bold;
+    }
+  }
+
+  &__text {
+    @mixin block-text center;
+    margin: 0 0 60px;
+    
+    @media (--mobile) {
+      margin: 0 0 30px;
+    }
+  }
+}

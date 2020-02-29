@@ -1,0 +1,39 @@
+@import '_media';
+@import '_variables';
+@import '_mixins';
+@import '_grid';
+@import '_fonts';
+@import 'header/_header';
+@import '_back-to-top';
+@import '_footer';
+@import '_index-advantages';
+@import '_index-camp';
+@import '_index-celebration';
+@import '_index-contacts';
+@import '_index-feedback';
+@import '_index-gallery';
+@import '_index-infrastructure';
+@import '_index-masthead';
+@import '_index-prices';
+@import '_index-reservation-slider';
+@import '_index-school';
+@import '_index-skatepark';
+@import '_index-superwrapper';
+@import '_index-team';
+@import '_index-testimonials';
+@import '_lightbox';
+@import '_recall-modal';
+@import '_reservation-modal';
+
+/* @import '../../../../node_modules/animate.js/dist/styles/app.min.css'; */
+
+.text {
+  &--color {
+    &-pink {
+      color: var(--color-main);
+    }
+    &-black {
+      color: #000;
+    }
+  }
+}

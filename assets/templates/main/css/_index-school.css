@@ -1,0 +1,48 @@
+.index-school-superblock {
+  @mixin superblock;
+}
+
+.index-school {
+  @mixin common-block;
+  
+  &__container {
+    padding: 0 var(--padding-side);
+  }
+
+  &__supercontainer {
+    @mixin supercontainer;
+  }
+
+  &__supercol {
+    @mixin supercol--image-text;
+  }
+
+  &__content {
+    padding: 30px var(--padding-side);
+    @mixin tiny-container;
+  }
+
+  &__text {
+    max-width: 640px;
+    
+    @media (--tablet-landscape) {
+      max-width: 100%;
+    }
+
+    &--1 {
+      @mixin header1 left;
+    }
+
+    &--2 {
+      @mixin header2 left;
+    }
+
+    &--3 {
+      @mixin header3 left;
+    }
+
+    &--4 {
+      @mixin block-text left;
+    }
+  }
+}

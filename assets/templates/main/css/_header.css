@@ -1,0 +1,18 @@
+.header {
+  font-family: var(--font-main);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  &__logo {
+    display: block;
+
+    svg {
+      display: block;
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.index-prices {
+  background-color: var(--color-main);
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  font-display: swap;
+  font-family: var(--font-main);
+  position: relative;
+  overflow: hidden;
+  text-align: left;
+  z-index: 1;
+
+  &::before {
+    @mixin gradient-background;
+  }
+
+  &__content {
+    @mixin tiny-container;
+    padding: 120px var(--padding-side) 100px;
+    position: relative;
+    z-index: 2;
+    
+    @media (--mobile) {
+      padding: 50px var(--padding-side) 50px;
+    }
+  }
+
+  &__header {
+    @mixin header2 center;
+    color: #fff;
+    margin: 0 0 60px;
+
+    @media (--desktop) {
+      margin: 0 0 10px;
+    }
+  }
+
+  &__line {
+    @mixin line #fff;
+  }
+
+  &__text {
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0 0 50px;
+    
+    p {
+      margin: 10px 0;
+      letter-spacing: 2px;
+      font-size: 17px;
+    }
+  }
+
+  &__download {
+    @mixin button-w-icon;
+
+    background-color: #2641cc;
+    color: #fff;
+
+    &-wrapper {
+      text-align: center;
+      width: 100%;
+    }
+  }
+}

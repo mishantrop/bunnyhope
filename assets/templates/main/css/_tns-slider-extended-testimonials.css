@@ -1,0 +1,16 @@
+#block-index-testimonials {
+  .tns-slider {
+    background-color: #fff;
+
+    & .index-testimonials-item {
+      background-position: center;
+      background-size: cover;
+      border: 20px solid #fff;
+      display: inline-block;
+    }
+  }
+
+  .tns-outer {
+    @mixin tns-outer;
+  }
+}

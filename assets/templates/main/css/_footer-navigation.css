@@ -1,0 +1,10 @@
+.footer-navigation {
+  @media (--tablet) {
+    font-size: 16px;
+    margin: 0 0 2rem;
+  }
+
+  @media (--mobile) {
+    font-size: 1rem;
+  }
+}

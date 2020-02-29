@@ -1,0 +1,23 @@
+.header-navigation-toggler {
+  background-color: transparent;
+  border: 0;
+  color: var(--color-second);
+  cursor: pointer;
+  display: none;
+  margin: 0;
+  padding: 10px;
+
+  @media (--tablet-landscape) {
+    display: block;
+  }
+
+  svg {
+    display: block;
+    height: 40px;
+    width: 40px;
+
+    path {
+      color: var(--color-second);
+    }
+  }
+}

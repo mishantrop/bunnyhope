@@ -1,0 +1,69 @@
+@import '_index-infrastructure-item';
+
+.index-infrastructure {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+  font-display: swap;
+  font-family: var(--font-main);
+  padding: 120px var(--padding-side) 70px;
+  text-align: left;
+  
+  @media (--mobile) {
+    padding: 30px var(--padding-side) 40px;
+  }
+
+  &__supercontainer {
+    @mixin supercontainer;
+    justify-content: center;
+  }
+
+  &__supercol {
+    @mixin supercol--image-text;
+
+    &--image {
+      background-position: center top;
+      max-width: 600px;
+
+      @media (--tablet-landscape) {
+        max-width: unset;
+      }
+    }
+  }
+
+  &__content {
+    padding: 30px var(--padding-side);
+    @mixin tiny-container;
+  }
+
+  &__text {
+    max-width: 640px;
+    padding: 0 0 0 20px;
+    
+    @media (--tablet-landscape) {
+      max-width: 100%;
+    }
+
+    &--1 {
+      @mixin header1 center;
+    }
+
+    &--2 {
+      @mixin header2 center;
+    }
+
+    &--3 {
+      @mixin block-text center;
+    }
+  }
+
+  &__metrics {
+    display: flex;
+    flex-wrap: wrap;
+    
+    @media (--tablet-landscape) {
+      justify-content: center;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.top {
+  background-color: #1b2026;
+  font-family: var(--font-main);
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+
+  &__address {
+    color: #fff;
+  }
+
+  &__worktime {
+    &-item {
+      color: #fff;
+      display: block;
+      margin: 0 0 5px;
+    }
+  }
+
+  &__contacts {
+
+    &-item {
+      color: var(--color-light-link);
+      display: block;
+      margin: 0 0 5px;
+      text-align: right;
+      text-decoration: none;
+      transition: color var(--transition-length) linear;
+
+      &:hover {
+        color: var(--color-light-link--hover);
+      }
+    }
+  }
+}

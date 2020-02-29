@@ -1,0 +1,182 @@
+.index-reservation {
+  &-slider {
+    font-display: swap;
+    font-family: Oswald,Arial,Verdana,Tahoma;
+    position: relative;
+    text-align: left;
+    z-index: 1;
+
+    & > .tns-outer {
+      position: relative;
+
+      & > .tns-controls {
+        @mixin tns-controls-light;
+      }
+
+      & > .tns-nav {
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        padding: 0 0 10px;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        & > button {
+          background-color: #fff;
+          border-radius: 6px;
+          border: 2px solid #fff;
+          cursor: pointer;
+          height: 12px;
+          width: 12px;
+          padding: 0;
+          margin: 0 4px;
+
+          &.tns-nav-active {
+            background-color: var(--color-main);
+          }
+        }
+      }
+    }
+  }
+
+  &-slide {
+    background-color: var(--color-main-dark);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 880px;
+    overflow: hidden;
+    position: relative;
+
+    @media (--notebook) {
+      height: 750px;
+    }
+
+    @media (--desktop) {
+      height: 700px;
+    }
+
+    @media (--tablet-landscape) {
+      height: 600px;
+    }
+
+    @media (--tablet) {
+      height: 500px;
+    }
+
+    @media (--mobile) {
+      height: 370px;
+    }
+
+    &__content {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 200px 20px;
+      z-index: 2;
+
+      &::after {
+        @mixin low-gradient-background;
+      }
+
+      @media (--tablet) {
+        padding: 50px 20px;
+        position: static;
+      }
+
+      @media (--mobile) {
+        padding: 20px;
+      }
+
+      &-inner {
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &__first-text {
+      color: #fff;
+      font-size: 50px;
+      line-height: 1.5;
+      font-weight: 700;
+      margin: 0 0 50px;
+      padding: 0 1rem 0 0;
+      text-shadow: 0 0 8px #000;
+      text-transform: uppercase;
+      user-select: none;
+      
+      @mixin selection;
+      
+      @media (--tablet) {
+        font-size: 50px;
+        padding: 0;
+        width: 100%;
+      }
+      
+      @media (--mobile) {
+        font-size: 28px;
+        margin: 0 0 20px;
+        width: 100%;
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+
+    &__second-text {
+      color: #fff;
+      font-family: var(--font-second);
+      font-size: 22px;
+      font-weight: 400;
+      margin: 0 0 50px;
+      padding: 0.8rem 0 0 0;
+      text-shadow: 0 0 8px #000;
+      user-select: none;
+      
+      @media (--tablet) {
+        display: block;
+        margin: 0 0 40px;
+        padding: 0;
+        width: 100%;
+      }
+      
+      @media (--mobile) {
+        font-size: 1rem;
+        margin: 0 0 20px;
+        width: 100%;
+      }
+      
+      p {
+        @mixin selection;
+
+        &:first-child {
+          margin-top: 0;
+        }
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &__reserve {
+      @mixin button-w-icon;
+
+      background-color: var(--color-main);
+      border-radius: 35px;
+      color: #fff;
+      font-size: 23px;
+      padding: 20px 60px;
+
+      &-wrapper {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+      
+        @media (--mobile) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

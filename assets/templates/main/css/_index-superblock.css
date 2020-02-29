@@ -1,0 +1,16 @@
+.index-superblock {
+  border-left: 5px solid var(--color-main);
+  font-family: var(--font-main);
+  margin: 0 0 20px;
+  padding: 10px 0 10px 20px;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 0 5px;
+  }
+  &__text {
+    font-size: 16px;
+    font-weight: 700;
+  }
+}

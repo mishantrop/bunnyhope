@@ -1,0 +1,10 @@
+:root {
+  --color-main: #ec5c7d;
+  --color-second: #222;
+  --color-grey: #ddd;
+  --color-main-dark: #881a3c;
+  --padding-side: 20px;
+  --transition-length: 0.1s;
+  --font-main: 'Oswald', Arial, Verdana, Tahoma;
+  --font-second: 'Roboto', Arial, Verdana, Tahoma;
+}

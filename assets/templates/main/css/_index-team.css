@@ -1,0 +1,39 @@
+@import '_index-team-item';
+@import '_tns-slider-extended-team';
+
+.index-team {
+  font-family: var(--font-main);
+  padding: 50px 0 60px;
+
+  &__header {
+    @mixin header2 center;
+    padding: 0 0 2rem 0;
+  }
+
+  &__header2 {
+    @mixin header1 center;
+    padding: 0 0 1rem 0;
+  }
+
+  &__header3 {
+    font-size: 36px;
+    font-weight: 700;
+    padding: 0 0 1rem 0;
+    text-align: center;
+    text-transform: lowercase;
+    
+    @media (--mobile) {
+      font-size: 17px;
+      margin: 0 0 10px;
+      text-align: center;
+    }
+  }
+  
+  &__text {
+    font-family: var(--font-second);
+    max-width: 720px;
+    margin: 0 auto;
+    
+    @mixin block-text center;
+  }
+}

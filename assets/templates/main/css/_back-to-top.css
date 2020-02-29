@@ -1,0 +1,54 @@
+.back-to-top {
+  background-color: var(--color-main);
+  border-radius: 32px;
+  border: 0;
+  bottom: 32px;
+  box-shadow: 2px 2px 8px 0px #000;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  height: 64px;
+  margin: 0;
+  opacity: 0;
+  overflow: hidden;
+  padding: 10px;
+  position: fixed;
+  right: 32px;
+  text-align: center;
+  text-decoration: none;
+  transform: translateZ(0);
+  transition: background-color var(--transition-length) linear, opacity var(--transition-length) linear;
+  width: 64px;
+  z-index: 3;
+  
+  @media (--mobile) {
+    bottom: 10px;
+    height: 32px;
+    right: 10px;
+    width: 32px;
+  }
+
+  &--active {
+    bottom: 32px;
+    opacity: 1;
+    
+    @media (--mobile) {
+      bottom: 10px;
+    }
+  }
+
+  &:active, &:focus, &:hover {
+    background-color: #c53959;
+    outline: none;
+  }
+
+  svg {
+    height: 100%;
+    width: 100%;
+    path {
+      fill: #fff;
+      display: block;
+    }
+  }
+}
