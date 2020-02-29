@@ -21,7 +21,6 @@
   }
 
   &__contacts {
-
     &-item {
       color: var(--color-light-link);
       display: block;

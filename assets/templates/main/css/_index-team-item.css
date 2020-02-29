@@ -1,57 +1,57 @@
 .index-team-item {
-    display: flex;
-    
+  display: flex;
+
+  @media (--mobile) {
+    background-color: var(--color-main);
+  }
+
+  &__left {
+    padding: 12px;
+  }
+
+  &__photo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 140px;
+    width: 140px;
+  }
+
+  &__right {
+    padding: 12px;
+  }
+
+  &__category {
+    color: #666;
+    font-family: var(--font-second);
+    font-size: 15px;
+    margin: 0 0 12px;
+    text-align: left;
+
     @media (--mobile) {
-      background-color: var(--color-main);
-    }
-    
-    &__left {
-      padding: 12px;
-    }
-    
-    &__photo {
-      background-size: cover;
-      background-repeat: no-repeat;
-      height: 140px;
-      width: 140px;
-    }
-    
-    &__right {
-      padding: 12px;
-    }
-
-    &__category {
-      color: #666;
-      font-family: var(--font-second);
-      font-size: 15px;
-      margin: 0 0 12px;
-      text-align: left;
-      
-      @media (--mobile) {
-        color: #fff;
-      }
-    }
-
-    &__courses {
-      color: #666;
-      font-family: var(--font-second);
-      font-size: 15px;
-      text-align: left;
-      
-      @media (--mobile) {
-        color: #fff;
-      }
-    }
-
-    &__name {
-      color: #333;
-      font-family: var(--font-second);
-      font-size: 20px;
-      margin: 0 0 12px;
-      text-align: left;
-      
-      @media (--mobile) {
-        color: #fff;
-      }
+      color: #fff;
     }
   }
+
+  &__courses {
+    color: #666;
+    font-family: var(--font-second);
+    font-size: 15px;
+    text-align: left;
+
+    @media (--mobile) {
+      color: #fff;
+    }
+  }
+
+  &__name {
+    color: #333;
+    font-family: var(--font-second);
+    font-size: 20px;
+    margin: 0 0 12px;
+    text-align: left;
+
+    @media (--mobile) {
+      color: #fff;
+    }
+  }
+}

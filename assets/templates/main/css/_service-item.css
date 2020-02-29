@@ -6,13 +6,15 @@
   overflow: hidden;
   text-decoration: none;
   user-select: none;
+
   &:hover {
     .service-item__image {
-      &:after {
+      &::after {
         transform: scale(1.11);
       }
     }
   }
+
   &__image {
     align-items: center;
     background-position: center center;
@@ -26,7 +28,7 @@
     position: relative;
     transform-origin: center;
 
-    &:after {
+    &::after {
       background-image: inherit;
       background-repeat: no-repeat;
       background-size: cover;
@@ -39,10 +41,12 @@
       top: 0;
       transition: transform var(--transition-length) linear;
     }
+
     @media (--tablet) {
       height: 200px;
     }
   }
+
   &__title {
     align-items: center;
     background-color: rgba(27, 32, 38, 0.57);

@@ -7,7 +7,7 @@
   font-family: var(--font-main);
   padding: 0 var(--padding-side) 70px;
   text-align: left;
-  
+
   @media (--mobile) {
     padding: 0 var(--padding-side) 40px;
   }
@@ -15,7 +15,7 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    
+
     @media (--tablet-landscape) {
       display: block;
       width: 100%;
@@ -28,7 +28,7 @@
 
   &__col {
     width: 50%;
-    
+
     @media (--tablet-landscape) {
       width: 100%;
     }
@@ -36,12 +36,12 @@
     &--image {
       background-repeat: no-repeat;
       background-size: contain;
-      
+
       @media (--tablet-landscape) {
         background-position: center center;
         height: 400px;
       }
-      
+
       @media (--mobile) {
         height: 300px;
       }
@@ -50,6 +50,7 @@
 
   &__content {
     padding: 30px var(--padding-side);
+
     @mixin tiny-container;
   }
 
@@ -74,6 +75,7 @@
 
     &--4 {
       @mixin block-text center;
+
       margin: 0 0 10px;
     }
   }

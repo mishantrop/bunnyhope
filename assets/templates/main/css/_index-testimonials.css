@@ -6,8 +6,9 @@
 
   &__header {
     @mixin header3 center;
+
     padding: 0 0 2rem 0;
-    
+
     @media (--mobile) {
       margin: 0 0 10px;
     }
@@ -15,6 +16,7 @@
 
   &__header2 {
     @mixin header1 center;
+
     padding: 0 0 1rem 0;
   }
 

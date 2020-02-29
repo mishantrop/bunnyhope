@@ -52,5 +52,9 @@
     "scroll-to-element": "^2.0.3",
     "tiny-slider": "^2.9.2",
     "webpack": "3.8.1"
+  },
+  "devDependencies": {
+    "stylelint": "^13.2.0",
+    "stylelint-config-standard": "^20.0.0"
   }
 }
