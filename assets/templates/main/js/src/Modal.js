@@ -1,4 +1,4 @@
-export default class Modal {
+export class Modal {
   constructor(name, onClose) {
     this.state = {
       isOpened: false,

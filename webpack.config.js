@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
+// const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const config = {
   target: 'web',
@@ -39,9 +40,10 @@ const config = {
       'process.env.NODE_ENV': 'production',
     }),
     new UglifyJSPlugin(),
+    // new BundleAnalyzerPlugin(),
   ],
   stats: {
-    colors: true
+    colors: true,
   },
   devtool: 'source-map',
 };
@@ -54,4 +56,4 @@ const mainConfig = Object.assign({}, config, {
     filename: 'main.min.js',
   },
 });
-module.exports = [mainConfig];
+module.exports = [ mainConfig ];

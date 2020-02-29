@@ -1,4 +1,4 @@
-const initYandexMap = (mapId) => {
+export const initYandexMap = (mapId) => {
   const ymapElement = document.getElementById(mapId);
   if (!ymapElement) {
     return false;
@@ -7,9 +7,13 @@ const initYandexMap = (mapId) => {
   const center = ymapElement.getAttribute('data-coords').split(',');
   const title = ymapElement.getAttribute('data-title');
 
+  if (!ymaps) {
+    console.warn('Yandex Maps is not loaded :(');
+  }
+
   ymaps.ready(() => {
     var map = new ymaps.Map(mapId, {
-      center: [Number(center[0].trim()), Number(center[1].trim())],
+      center: [ Number(center[0].trim()), Number(center[1].trim()) ],
       controls: [],
       zoom: 16,
     });
@@ -32,10 +36,8 @@ const initYandexMap = (mapId) => {
         hintContent: 'Bunny Hop',
         balloonContent: title,
         iconImageHref: '/assets/templates/main/images/yamap-ico.png',
-      }
+      },
     );
     map.geoObjects.add(myPlacemark);
   });
 };
-
-export default initYandexMap;

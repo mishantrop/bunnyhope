@@ -1,8 +1,8 @@
-import Animate from 'animate.js';
+// import Animate from 'animate.js';
 import { initBackToTopScroll } from './backtotop';
-import initYandexMap from './yandexMap';
-import Modal from './Modal';
-import Navigation from './navigation';
+import { initYandexMap } from './yandexMap';
+import { Modal } from './Modal';
+import { Navigation } from './navigation';
 import { initSuperButton } from './superbutton';
 import { tns } from "tiny-slider/src/tiny-slider.module"
 import { LuminousGallery } from 'luminous-lightbox';
@@ -28,17 +28,26 @@ const init = () => {
   initSuperButton();
   initIndexGalleryLightbox();
 
-  const animate = new Animate({
-    offset: [0.01, 0.5],
-    delay: 0,
-    target: '[data-animate]',
-    onScroll: true,
-    onLoad: true,
-  });
-  animate.init();
+  // const animate = new Animate({
+  //   offset: [0.01, 0.5],
+  //   delay: 0,
+  //   target: '[data-animate]',
+  //   onScroll: true,
+  //   onLoad: true,
+  // });
+  // animate.init();
+  initLazyBackgrouns();
   initYandexMap('index-map-93', [ 55.780598, 37.715462 ], 'Москва, ул. Большая Семёновская, дом 42');
   initYandexMap('index-map-95', [ 55.8276949, 37.4485724 ], 'Москва, дом 24, БЦ «Смольный» 24, 3 этаж');
   initModals();
+}
+
+const initLazyBackgrouns = () => {
+  const attributeName = 'data-lazy-background';
+  const lazyBackgroundsBlocks = document.querySelectorAll(`[${attributeName}]`);
+  lazyBackgroundsBlocks.forEach((element) => {
+    element.style.backgroundImage = `url('${element.getAttribute(attributeName)}')`;
+  });
 }
 
 const initModals = () => {

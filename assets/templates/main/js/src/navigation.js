@@ -2,7 +2,7 @@ import 'whatwg-fetch';
 import { isTablet } from './helpers';
 import { scrollTo } from './scrollto';
 
-export default class Navigation {
+export class Navigation {
   constructor() {
     this.state = {
       expanded: false,
