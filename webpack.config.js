@@ -10,7 +10,7 @@ const config = {
       loader: 'babel-loader',
       query: {
         plugins: [
-          'babel-plugin-transform-class-properties'
+          'babel-plugin-transform-class-properties',
         ],
         presets: [
           [
@@ -36,7 +36,7 @@ const config = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      'process.env.NODE_ENV': 'production'
+      'process.env.NODE_ENV': 'production',
     }),
     new UglifyJSPlugin(),
   ],
@@ -51,7 +51,7 @@ const mainConfig = Object.assign({}, config, {
   entry: path.resolve(__dirname, 'assets/templates/main/js/src/index.js'),
   output: {
     path: path.resolve(__dirname, 'assets/templates/main/dist'),
-    filename: 'main.min.js'
+    filename: 'main.min.js',
   },
 });
 module.exports = [mainConfig];

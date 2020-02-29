@@ -25,13 +25,12 @@
 @import '_recall-modal';
 @import '_reservation-modal';
 
-/* @import '../../../../node_modules/animate.js/dist/styles/app.min.css'; */
-
 .text {
   &--color {
     &-pink {
       color: var(--color-main);
     }
+
     &-black {
       color: #000;
     }

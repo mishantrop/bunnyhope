@@ -3,11 +3,16 @@
 .footer {
   background-color: #fff;
   font-family: var(--font-second);
-  
+
   &__container {
     padding: 0 var(--padding-side);
+
+    @media (--tablet) {
+      display: block;
+      text-align: center;
+    }
   }
-  
+
   @media (--mobile) {
     font-size: 1rem;
   }
@@ -19,12 +24,12 @@
     margin: 0 0 10px;
     text-decoration: none;
     transition: color var(--transition-length) linear;
-    
+
     &:hover {
       color: #881a3c;
     }
   }
-  
+
   address {
     font-style: normal;
     margin: 0 0 10px;
@@ -35,13 +40,6 @@
 
     @media (--mobile) {
       padding: 20px var(--padding-side);
-    }
-  }
-
-  &__container {
-    @media (--tablet) {
-      display: block;
-      text-align: center;
     }
   }
 

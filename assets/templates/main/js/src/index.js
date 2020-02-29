@@ -1,5 +1,4 @@
 import Animate from 'animate.js';
-import { sameHeight } from './sameheight';
 import { initBackToTopScroll } from './backtotop';
 import initYandexMap from './yandexMap';
 import Modal from './Modal';

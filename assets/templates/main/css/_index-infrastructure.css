@@ -9,13 +9,14 @@
   font-family: var(--font-main);
   padding: 120px var(--padding-side) 70px;
   text-align: left;
-  
+
   @media (--mobile) {
     padding: 30px var(--padding-side) 40px;
   }
 
   &__supercontainer {
     @mixin supercontainer;
+
     justify-content: center;
   }
 
@@ -34,13 +35,14 @@
 
   &__content {
     padding: 30px var(--padding-side);
+
     @mixin tiny-container;
   }
 
   &__text {
     max-width: 640px;
     padding: 0 0 0 20px;
-    
+
     @media (--tablet-landscape) {
       max-width: 100%;
     }
@@ -61,7 +63,7 @@
   &__metrics {
     display: flex;
     flex-wrap: wrap;
-    
+
     @media (--tablet-landscape) {
       justify-content: center;
     }

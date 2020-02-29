@@ -1,7 +1,7 @@
 .index-feedback {
   background-color: var(--color-main);
   padding: 60px var(--padding-side) 20px;
-  
+
   @media (--mobile) {
     padding: 40px var(--padding-side);
   }
@@ -25,7 +25,7 @@
   & .form-group {
     @mixin form-group;
   }
-  
+
   &-messages,
   &-loader,
   &-errors {

@@ -5,6 +5,6 @@
   --color-main-dark: #881a3c;
   --padding-side: 20px;
   --transition-length: 0.1s;
-  --font-main: 'Oswald', Arial, Verdana, Tahoma;
-  --font-second: 'Roboto', Arial, Verdana, Tahoma;
+  --font-main: 'Oswald', 'Arial', 'Verdana', 'Tahoma';
+  --font-second: 'Roboto', 'Arial', 'Verdana', 'Tahoma';
 }

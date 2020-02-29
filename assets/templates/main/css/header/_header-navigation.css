@@ -79,13 +79,13 @@
     text-transform: uppercase;
     transition: color var(--transition-length) linear;
     z-index: 1;
-    
+
     @mixin selection;
 
     &--active {
       color: var(--color-main);
     }
-    
+
     @media (--notebook) {
       font-size: 14px;
       padding: 0 8px;
@@ -102,7 +102,7 @@
       padding: 1rem 0.5rem;
       text-align: center;
     }
-    
+
     @media (--mobile) {
       font-size: 1rem;
       padding: 0.5rem 0.5rem;
@@ -111,7 +111,7 @@
     &:hover {
       color: var(--color-main);
 
-      &:before {
+      &::before {
         opacity: 1;
       }
     }

@@ -1,7 +1,7 @@
 .index-reservation {
   &-slider {
     font-display: swap;
-    font-family: Oswald,Arial,Verdana,Tahoma;
+    font-family: 'Oswald', 'Arial', 'Verdana', 'Tahoma';
     position: relative;
     text-align: left;
     z-index: 1;
@@ -21,6 +21,7 @@
         position: absolute;
         width: 100%;
         z-index: 1;
+
         & > button {
           background-color: #fff;
           border-radius: 6px;
@@ -103,15 +104,15 @@
       text-shadow: 0 0 8px #000;
       text-transform: uppercase;
       user-select: none;
-      
+
       @mixin selection;
-      
+
       @media (--tablet) {
         font-size: 50px;
         padding: 0;
         width: 100%;
       }
-      
+
       @media (--mobile) {
         font-size: 28px;
         margin: 0 0 20px;
@@ -132,20 +133,20 @@
       padding: 0.8rem 0 0 0;
       text-shadow: 0 0 8px #000;
       user-select: none;
-      
+
       @media (--tablet) {
         display: block;
         margin: 0 0 40px;
         padding: 0;
         width: 100%;
       }
-      
+
       @media (--mobile) {
         font-size: 1rem;
         margin: 0 0 20px;
         width: 100%;
       }
-      
+
       p {
         @mixin selection;
 
@@ -172,7 +173,7 @@
         position: relative;
         width: 100%;
         z-index: 2;
-      
+
         @media (--mobile) {
           text-align: center;
         }

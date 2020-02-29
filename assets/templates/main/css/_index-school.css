@@ -4,7 +4,7 @@
 
 .index-school {
   @mixin common-block;
-  
+
   &__container {
     padding: 0 var(--padding-side);
   }
@@ -19,12 +19,13 @@
 
   &__content {
     padding: 30px var(--padding-side);
+
     @mixin tiny-container;
   }
 
   &__text {
     max-width: 640px;
-    
+
     @media (--tablet-landscape) {
       max-width: 100%;
     }

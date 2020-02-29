@@ -1,11 +1,11 @@
 .index-contacts {
   font-family: var(--font-main);
   padding: 50px 0 140px;
-  
+
   @media (--tablet) {
     padding: 40px var(--padding-side);
   }
-  
+
   @media (--mobile) {
     padding: 40px 0;
   }
@@ -16,7 +16,7 @@
     padding: 0 0 2rem 0;
     text-align: center;
     text-transform: uppercase;
-    
+
     @media (--mobile) {
       font-size: 30px;
       margin: 0 0 10px;
@@ -26,13 +26,14 @@
 
   &__header2 {
     @mixin header1 center;
+
     padding: 0 0 1rem 0;
   }
 
   &__right {
     font-family: var(--font-second);
     padding: 0 0 0 40px;
-    
+
     @media (--tablet) {
       padding: 20px 0 0;
     }
@@ -44,7 +45,7 @@
 
   &__contacts {
     margin: 0 0 2rem;
-    
+
     @media (--tablet) {
       display: flex;
     }
@@ -64,7 +65,7 @@
       }
     }
   }
-  
+
   &__email {
     padding: 0;
 
@@ -73,8 +74,7 @@
     }
 
     @media (--mobile) {
-      padding: 0
-      ;
+      padding: 0;
     }
   }
 
@@ -120,7 +120,7 @@
     transition: var(--transition-length) background-color linear;
     user-select: none;
     width: 55px;
-    
+
     @media (--mobile) {
       margin: 0;
     }
@@ -129,13 +129,16 @@
       display: block;
       height: 24px;
       width: 24px;
+
       path {
         fill: #fff;
         transition: var(--transition-length) fill ease;
       }
     }
+
     &:hover {
       background-color: #c53959;
+
       svg {
         path {
           fill: #fff;

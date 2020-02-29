@@ -7,10 +7,10 @@ module.exports = {
     "plugin:no-russian-chars/all"
   ],
   "globals": {
-    "__DEV__": true
+    "__DEV__": true,
   },
   "env": {
-    "browser": true
+    "browser": true,
   },
   "rules": {
     "arrow-body-style": "off",
