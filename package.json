@@ -1,7 +1,7 @@
 {
-  "name": "bunnyhop",
+  "name": "bunnyhope",
   "version": "1.0.0",
-  "description": "bunnyhop.pro",
+  "description": "Source of https://bunnyhop.pro",
   "main": "index.php",
   "scripts": {
     "start": "webpack --watch --progress --colors",
