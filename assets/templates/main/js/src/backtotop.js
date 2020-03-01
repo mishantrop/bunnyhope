@@ -1,6 +1,6 @@
 import scrollToElement from 'scroll-to-element';
 
-const initBackToTopScroll = () => {
+export const initBackToTopScroll = () => {
   const backToTopSelector = '.back-to-top';
   const backToTopClassActive = 'back-to-top--active';
   const scrollTrigger = 300;
@@ -30,8 +30,4 @@ const initBackToTopScroll = () => {
   } else {
     console.log('backToTop not found');
   }
-};
-
-export {
-  initBackToTopScroll,
 };

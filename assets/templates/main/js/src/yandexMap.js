@@ -1,25 +1,29 @@
 export const initYandexMap = (mapId) => {
   const ymapElement = document.getElementById(mapId);
   if (!ymapElement) {
+    console.warn(`Element #${mapId} does not exists`);
+
     return false;
   }
 
   const center = ymapElement.getAttribute('data-coords').split(',');
   const title = ymapElement.getAttribute('data-title');
 
-  if (!ymaps) {
+  if (!window.ymaps) {
     console.warn('Yandex Maps is not loaded :(');
+
+    return false;
   }
 
-  ymaps.ready(() => {
-    var map = new ymaps.Map(mapId, {
-      center: [ Number(center[0].trim()), Number(center[1].trim()) ],
+  window.ymaps.ready(() => {
+    const map = new window.ymaps.Map(mapId, {
+      center: [Number(center[0].trim()), Number(center[1].trim())],
       controls: [],
       zoom: 16,
     });
     map.behaviors.disable('scrollZoom');
     // map.behaviors.disable('drag');
-    var zoomControl = new ymaps.control.ZoomControl({
+    const zoomControl = new window.ymaps.control.ZoomControl({
       options: {
         position: {
           top: 20,
@@ -30,7 +34,7 @@ export const initYandexMap = (mapId) => {
     });
     map.controls.add(zoomControl);
 
-    const myPlacemark = new ymaps.Placemark(
+    const myPlacemark = new window.ymaps.Placemark(
       center,
       {
         hintContent: 'Bunny Hop',
@@ -40,4 +44,6 @@ export const initYandexMap = (mapId) => {
     );
     map.geoObjects.add(myPlacemark);
   });
+
+  return true;
 };

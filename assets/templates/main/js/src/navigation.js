@@ -18,10 +18,10 @@ export class Navigation {
   }
 
   setState(patch) {
-    let newState = Object.assign(this.state, patch);
+    const newState = Object.assign(this.state, patch);
     this.state = newState;
     this.render();
-  };
+  }
 
   init() {
     this.body = document.querySelector('body');
@@ -66,23 +66,21 @@ export class Navigation {
         e.preventDefault();
       }, false);
     }
-    
+
     const pageLinks = document.querySelectorAll('[data-scrollto]');
-  
-    if (pageLinks) {
-      [].forEach.call(pageLinks, (el) => {
-        el.addEventListener('click', (e) => {
-          const target = document.querySelector(el.getAttribute('data-scrollto'));
-          if (target) {
-            this.setState({
-              expanded: false,
-            });
-            scrollTo(target, 500);
-            e.preventDefault();
-          }
-        });
+
+    [].forEach.call(pageLinks, (el) => {
+      el.addEventListener('click', (e) => {
+        const target = document.querySelector(el.getAttribute('data-scrollto'));
+        if (target) {
+          this.setState({
+            expanded: false,
+          });
+          scrollTo(target, 500);
+          e.preventDefault();
+        }
       });
-    }
+    });
   }
 
   render() {

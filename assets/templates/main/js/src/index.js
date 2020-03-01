@@ -1,46 +1,12 @@
-// import Animate from 'animate.js';
+import { LuminousGallery } from 'luminous-lightbox';
+import Quasiform from 'quasiform';
+
+import { tns } from 'tiny-slider/src/tiny-slider.module';
 import { initBackToTopScroll } from './backtotop';
 import { initYandexMap } from './yandexMap';
 import { Modal } from './Modal';
 import { Navigation } from './navigation';
 import { initSuperButton } from './superbutton';
-import { tns } from "tiny-slider/src/tiny-slider.module"
-import { LuminousGallery } from 'luminous-lightbox';
-import quasiform from 'quasiform';
-
-const init = () => {
-  console.log('%c Создание пиздатых сайтов — quasi-art.ru', 'background-color: #000; color: #fff;');
-
-  const navigation = new Navigation();
-  initBackToTopScroll();
-  initIndexGallerySlider();
-  initIndexGalleryMobileSlider();
-  initIndexTeamSlider();
-  initIndexTestimonialsSlider();
-  initIndexReservationSlider();
-
-  if (document.querySelectorAll('#index-feedback__form-wrapper')) {
-    const feedbackForm = new quasiform({
-      selector: '#index-feedback__form-wrapper',
-    });
-  }
-
-  initSuperButton();
-  initIndexGalleryLightbox();
-
-  // const animate = new Animate({
-  //   offset: [0.01, 0.5],
-  //   delay: 0,
-  //   target: '[data-animate]',
-  //   onScroll: true,
-  //   onLoad: true,
-  // });
-  // animate.init();
-  initLazyBackgrouns();
-  initYandexMap('index-map-93', [ 55.780598, 37.715462 ], 'Москва, ул. Большая Семёновская, дом 42');
-  initYandexMap('index-map-95', [ 55.8276949, 37.4485724 ], 'Москва, дом 24, БЦ «Смольный» 24, 3 этаж');
-  initModals();
-}
 
 const initLazyBackgrouns = () => {
   const attributeName = 'data-lazy-background';
@@ -48,12 +14,7 @@ const initLazyBackgrouns = () => {
   lazyBackgroundsBlocks.forEach((element) => {
     element.style.backgroundImage = `url('${element.getAttribute(attributeName)}')`;
   });
-}
-
-const initModals = () => {
-  initModal('recall');
-  initModal('reservation', true);
-}
+};
 
 const initModal = (name) => {
   const modal = new Modal(name, (modalName) => {
@@ -66,7 +27,7 @@ const initModal = (name) => {
       messages.style.display = 'none';
     }
   });
-  const form = new quasiform({
+  const form = new Quasiform({
     hideFormOnSuccess: true,
     selector: `#${name}__form-wrapper`,
   });
@@ -78,13 +39,18 @@ const initModal = (name) => {
       });
     });
   }
-}
+};
+
+const initModals = () => {
+  initModal('recall');
+  initModal('reservation', true);
+};
 
 const initIndexGalleryLightbox = () => {
   const options = {
     arrowNavigation: true,
   };
-  new LuminousGallery(document.querySelectorAll('[data-lightbox="index-gallery-item"]'), options);
+  const gallery = new LuminousGallery(document.querySelectorAll('[data-lightbox="index-gallery-item"]'), options);
 };
 
 const initIndexGallerySlider = () => {
@@ -120,7 +86,7 @@ const initIndexGallerySlider = () => {
     slideBy: 'page',
     speed: 400,
   });
-}
+};
 
 const initIndexGalleryMobileSlider = () => {
   const id = 'tns-slider--mobile';
@@ -155,7 +121,7 @@ const initIndexGalleryMobileSlider = () => {
     slideBy: 'page',
     speed: 400,
   });
-}
+};
 
 const initIndexTeamSlider = () => {
   const id = 'tns-slider-team';
@@ -186,7 +152,7 @@ const initIndexTeamSlider = () => {
     slideBy: 'page',
     speed: 400,
   });
-}
+};
 
 const initIndexTestimonialsSlider = () => {
   const id = 'tns-slider-testimonials';
@@ -207,7 +173,7 @@ const initIndexTestimonialsSlider = () => {
     slideBy: 'page',
     speed: 400,
   });
-}
+};
 
 const initIndexReservationSlider = () => {
   const id = 'index-reservation-slider';
@@ -230,7 +196,41 @@ const initIndexReservationSlider = () => {
     slideBy: 'page',
     speed: 400,
   });
-}
+};
+
+const init = () => {
+  console.log('%c Создание пиздатых сайтов — quasi-art.ru', 'background-color: #000; color: #fff;');
+
+  const navigation = new Navigation();
+  initBackToTopScroll();
+  initIndexGallerySlider();
+  initIndexGalleryMobileSlider();
+  initIndexTeamSlider();
+  initIndexTestimonialsSlider();
+  initIndexReservationSlider();
+
+  if (document.querySelectorAll('#index-feedback__form-wrapper')) {
+    const feedbackForm = new Quasiform({
+      selector: '#index-feedback__form-wrapper',
+    });
+  }
+
+  initSuperButton();
+  initIndexGalleryLightbox();
+
+  // const animate = new Animate({
+  //   offset: [0.01, 0.5],
+  //   delay: 0,
+  //   target: '[data-animate]',
+  //   onScroll: true,
+  //   onLoad: true,
+  // });
+  // animate.init();
+  initLazyBackgrouns();
+  initYandexMap('index-map-93', [55.780598, 37.715462], 'Москва, ул. Большая Семёновская, дом 42');
+  initYandexMap('index-map-95', [55.8276949, 37.4485724], 'Москва, дом 24, БЦ «Смольный» 24, 3 этаж');
+  initModals();
+};
 
 if (document.readyState === 'complete' || document.readyState !== 'loading') {
   console.log('developed by quasi-art.ru');
