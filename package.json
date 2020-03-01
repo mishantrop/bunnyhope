@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack --watch --progress --colors",
     "js": "webpack --watch --progress --colors",
+    "stylelint": "node node_modules/stylelint/bin/stylelint.js \"./assets/templates/main/css/**/*.css\"",
+    "eslint": "./node_modules/.bin/eslint \"./assets/templates/main/js/src/**/*.js\"",
     "css": "gulp"
   },
   "author": "quasi-art.ru",
@@ -51,6 +53,11 @@
     "webpack": "3.8.1"
   },
   "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.3",
     "stylelint": "^13.2.0",
     "stylelint-config-standard": "^20.0.0",
     "webpack-bundle-analyzer": "^3.6.0"

@@ -1,4 +1,4 @@
-const scrollTo = (target, duration) => {
+export const scrollTo = (target, duration) => {
   const startingY = window.pageYOffset;
   const diff = target.offsetTop - startingY;
   let start = 0;
@@ -12,9 +12,5 @@ const scrollTo = (target, duration) => {
     if (time < duration) {
       window.requestAnimationFrame(step);
     }
-  })
-}
-
-export {
-  scrollTo,
+  });
 };

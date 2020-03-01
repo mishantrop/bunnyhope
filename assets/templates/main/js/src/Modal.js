@@ -11,10 +11,10 @@ export class Modal {
   }
 
   setState(patch) {
-    let newState = Object.assign(this.state, patch);
+    const newState = Object.assign(this.state, patch);
     this.state = newState;
     this.render();
-  };
+  }
 
   init() {
     this.elementWrapper = document.getElementById(`${this.name}-modal-wrapper`);
@@ -22,7 +22,7 @@ export class Modal {
 
     this.bindEvents();
   }
-  
+
   bindEvents = () => {
     if (this.elemenetCloseMenu) {
       this.elemenetCloseMenu.addEventListener('click', () => {
@@ -33,32 +33,32 @@ export class Modal {
       });
     }
   }
-  
+
   show() {
     this.setState({
       isOpened: true,
     });
   }
-  
+
   hide() {
     this.setState({
       isOpened: false,
     });
   }
-  
+
   render() {
     if (!this.elementWrapper) {
       console.log(`Modal ${this.name} does not exists`);
-      
+
       return;
     }
 
     const { isOpened } = this.state;
-    
+
     if (isOpened) {
       this.elementWrapper.classList.add(`${this.name}-modal-wrapper--opened`);
     } else {
       this.elementWrapper.classList.remove(`${this.name}-modal-wrapper--opened`);
     }
   }
-};
+}
