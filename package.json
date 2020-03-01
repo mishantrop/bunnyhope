@@ -6,6 +6,8 @@
   "scripts": {
     "start": "webpack --watch --progress --colors",
     "js": "webpack --watch --progress --colors",
+    "stylelint": "node node_modules/stylelint/bin/stylelint.js \"./assets/templates/main/css/**/*.css\"",
+    "eslint": "./node_modules/.bin/eslint \"./assets/templates/main/js/src/**/*.js\"",
     "css": "gulp"
   },
   "author": "quasi-art.ru",
