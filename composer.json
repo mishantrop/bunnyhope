@@ -1,0 +1,14 @@
+{
+    "name": "mishantrop/bunnyhope",
+    "description": "Website of Moscow Sport School bunnyhop.pro",
+    "type": "project",
+    "require": {
+        "modx/revolution": "2.7.3"
+    },
+    "authors": [
+        {
+            "name": "mishantrop",
+            "email": "quasi-art@ya.ru"
+        }
+    ]
+}
